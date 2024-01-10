@@ -5,7 +5,7 @@ import Header3 from "./components/header/Header3";
 
 import { CssBaseline, ThemeProvider } from "@mui/material";
 // Assuming the correct casing for 'Theme'
-import { ColorModeContext, useMode } from "./Theme"; 
+import { ColorModeContext, useMode } from "./theme"; 
 
 function App(): JSX.Element {
   const [theme, colorMode] = useMode();

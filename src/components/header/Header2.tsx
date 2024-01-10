@@ -70,7 +70,7 @@ export default function Header2() {
   };
 
   const handleMenuItemClick = (
-    event: React.MouseEvent<HTMLElement>,
+    _event: React.MouseEvent<HTMLElement>,
     index: number
   ) => {
     setSelectedIndex(index);

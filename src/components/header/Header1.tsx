@@ -34,7 +34,7 @@ const Header1: React.FC = () => {
   };
 
   const handleMenuItemClick = (
-    event: React.MouseEvent<HTMLElement>,
+    _event: React.MouseEvent<HTMLElement>,
     index: number
   ) => {
     setSelectedIndex(index);
