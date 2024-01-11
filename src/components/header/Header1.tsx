@@ -64,35 +64,7 @@ const Header1: React.FC = () => {
       <Typography >Free Express Shipping</Typography>
 
       <Box flexGrow={1} />
-      <div>
-        {theme.palette.mode === "light" ? (
-          <IconButton
-            onClick={() => {
-              localStorage.setItem(
-                "mode",
-                theme.palette.mode === "dark" ? "light" : "dark"
-              );
-              colorMode.toggleColorMode();
-            }}
-            color="inherit"
-          >
-            <LightModeOutlined />
-          </IconButton>
-        ) : (
-          <IconButton
-            onClick={() => {
-              localStorage.setItem(
-                "mode",
-                theme.palette.mode === "dark" ? "light" : "dark"
-              );
-              colorMode.toggleColorMode();
-            }}
-            color="inherit"
-          >
-            <DarkModeOutlined />
-          </IconButton>
-        )}
-      </div>
+    
       <List component="nav" aria-label="Device settings">
         <ListItem
           id="lock-button"

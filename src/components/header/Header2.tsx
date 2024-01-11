@@ -84,12 +84,14 @@ export default function Header2() {
     <Container
       sx={{ my: "20px", display: "flex", justifyContent: "space-between" }}
     >
-      <Stack alignItems={"center"}>
-        <ShoppingCartIcon />
-        <Typography>E-Commerce</Typography>
-      </Stack>
-      <Box>
-        <Search sx={{ display: "flex", border: 1, borderRadius: "40px" }}>
+   <img src="./img/logo2.svg"/>
+      <Box sx={
+        {
+          
+          width: "60%",
+        }
+      }>
+        <Search sx={{width: "60%", display: "flex", justifyContent:"space-between", border: 1, borderRadius: "40px" }}>
           <SearchIconWrapper>
             <SearchIcon />
           </SearchIconWrapper>
@@ -97,12 +99,18 @@ export default function Header2() {
             placeholder="Search…"
             inputProps={{ "aria-label": "search" }}
           />
-          <List
-            sx={{
-              bgcolor: "#74B087",
-              borderTopRightRadius: "30px",
-              borderBottomRightRadius: "30px",
-            }}
+         <Box sx={
+          {display: "flex",
+          justifyContent: "end",}
+         }>
+         <List
+           sx={{
+            bgcolor: "#F6F9FC",
+            borderLeft: "1px solid #DAE1E7",
+            textAlign: "center",
+            borderTopRightRadius: "30px",
+            borderBottomRightRadius: "30px",
+          }}
           >
             <ListItem
               id="lock-button"
@@ -114,6 +122,7 @@ export default function Header2() {
               sx={{
                 padding: "1px",
                 cursor: "pointer",
+                px:"15px",
                 borderRadius: "15px",
                 minWidth: "100px",
               }}
@@ -142,6 +151,7 @@ export default function Header2() {
               </MenuItem>
             ))}
           </Menu>
+         </Box>
         </Search>
       </Box>
       <Box>
