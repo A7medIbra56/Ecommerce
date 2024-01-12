@@ -1,10 +1,8 @@
-import React, { useContext, useState } from "react";
+import React, {  useState } from "react";
 import {
   Box,
-  IconButton,
   Stack,
   Typography,
-  useTheme,
   List,
   ListItem,
   ListItemText,
@@ -12,19 +10,13 @@ import {
   Menu,
 } from "@mui/material";
 import {
-  DarkModeOutlined,
   FacebookOutlined,
-  LightModeOutlined,
   Twitter,
 } from "@mui/icons-material";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import { ColorModeContext } from "../../theme";
-
 const options: string[] = ["AR", "EN"];
 
 const Header1: React.FC = () => {
-  const colorMode = useContext(ColorModeContext);
-  const theme = useTheme();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [selectedIndex, setSelectedIndex] = useState<number>(1);
   const open = Boolean(anchorEl);

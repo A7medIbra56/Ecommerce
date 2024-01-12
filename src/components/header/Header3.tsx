@@ -13,7 +13,6 @@ import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import Menu from './Menu';
-import { Dashboard } from '@mui/icons-material';
 import { Container } from '@mui/material';
 
 type Anchor = 'left';
