@@ -63,7 +63,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 const options = ["All category", "Car", "electronics", "Clothes"];
 export default function Header2() {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-  const [selectedIndex, setSelectedIndex] = useState(1);
+  const [selectedIndex, setSelectedIndex] = useState(0);
   const open = Boolean(anchorEl);
   const handleClickListItem = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -84,14 +84,21 @@ export default function Header2() {
     <Container
       sx={{ my: "20px", display: "flex", justifyContent: "space-between" }}
     >
-   <img src="./img/logo2.svg"/>
-      <Box sx={
-        {
-          
+      <img src="./img/logo2.svg" />
+      <Box
+        sx={{
           width: "60%",
-        }
-      }>
-        <Search sx={{width: "60%", display: "flex", justifyContent:"space-between", border: 1, borderRadius: "40px" }}>
+        }}
+      >
+        <Search
+          sx={{
+            width: "60%",
+            display: "flex",
+            justifyContent: "space-between",
+            border: 1,
+            borderRadius: "40px",
+          }}
+        >
           <SearchIconWrapper>
             <SearchIcon />
           </SearchIconWrapper>
@@ -99,59 +106,56 @@ export default function Header2() {
             placeholder="Search…"
             inputProps={{ "aria-label": "search" }}
           />
-         <Box sx={
-          {display: "flex",
-          justifyContent: "end",}
-         }>
-         <List
-           sx={{
-            bgcolor: "#F6F9FC",
-            borderLeft: "1px solid #DAE1E7",
-            textAlign: "center",
-            borderTopRightRadius: "30px",
-            borderBottomRightRadius: "30px",
-          }}
-          >
-            <ListItem
-              id="lock-button"
-              aria-haspopup="listbox"
-              aria-controls="lock-menu"
-              aria-label="when device is locked"
-              aria-expanded={open ? "true" : undefined}
-              onClick={handleClickListItem}
+          <Box sx={{ display: "flex", justifyContent: "end" }}>
+            <List
               sx={{
-                padding: "1px",
-                cursor: "pointer",
-                px:"15px",
-                borderRadius: "15px",
-                minWidth: "100px",
+                bgcolor: "#F6F9FC",
+                borderLeft: "1px solid #DAE1E7",
+                textAlign: "center",
+                borderTopRightRadius: "30px",
+                borderBottomRightRadius: "30px",
               }}
             >
-              <ListItemText secondary={options[selectedIndex]} />
-              <ArrowDropDownIcon />
-            </ListItem>
-          </List>
-          <Menu
-            id="lock-menu"
-            anchorEl={anchorEl}
-            open={open}
-            onClose={handleClose}
-            MenuListProps={{
-              "aria-labelledby": "lock-button",
-              role: "listbox",
-            }}
-          >
-            {options.map((option, index) => (
-              <MenuItem
-                key={option}
-                selected={index === selectedIndex}
-                onClick={(event) => handleMenuItemClick(event, index)}
+              <ListItem
+                id="lock-button"
+                aria-haspopup="listbox"
+                aria-controls="lock-menu"
+                aria-label="when device is locked"
+                aria-expanded={open ? "true" : undefined}
+                onClick={handleClickListItem}
+                sx={{
+                  padding: "1px",
+                  cursor: "pointer",
+                  px: "15px",
+                  borderRadius: "15px",
+                  minWidth: "100px",
+                }}
               >
-                {option}
-              </MenuItem>
-            ))}
-          </Menu>
-         </Box>
+                <ListItemText secondary={options[selectedIndex]} />
+                <ArrowDropDownIcon />
+              </ListItem>
+            </List>
+            <Menu
+              id="lock-menu"
+              anchorEl={anchorEl}
+              open={open}
+              onClose={handleClose}
+              MenuListProps={{
+                "aria-labelledby": "lock-button",
+                role: "listbox",
+              }}
+            >
+              {options.map((option, index) => (
+                <MenuItem
+                  key={option}
+                  selected={index === selectedIndex}
+                  onClick={(event) => handleMenuItemClick(event, index)}
+                >
+                  {option}
+                </MenuItem>
+              ))}
+            </Menu>
+          </Box>
         </Search>
       </Box>
       <Box>
