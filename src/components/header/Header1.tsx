@@ -1,10 +1,8 @@
-import React, { useContext, useState } from "react";
+import React, {  useState } from "react";
 import {
   Box,
-  IconButton,
   Stack,
   Typography,
-  useTheme,
   List,
   ListItem,
   ListItemText,
@@ -12,19 +10,13 @@ import {
   Menu,
 } from "@mui/material";
 import {
-  DarkModeOutlined,
   FacebookOutlined,
-  LightModeOutlined,
   Twitter,
 } from "@mui/icons-material";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import { ColorModeContext } from "../../theme";
-
 const options: string[] = ["AR", "EN"];
 
 const Header1: React.FC = () => {
-  const colorMode = useContext(ColorModeContext);
-  const theme = useTheme();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [selectedIndex, setSelectedIndex] = useState<number>(1);
   const open = Boolean(anchorEl);
@@ -47,21 +39,23 @@ const Header1: React.FC = () => {
 
   return (
     <Stack
-      bgcolor="#74B087"
+      bgcolor="#2B3445"
       px={"10px"}
       direction={"row"}
       alignItems={"center"}
     >
       <Typography
-        padding={1}
-        margin={"5px"}
-        fontSize={"13px"}
-        borderRadius={2}
-        bgcolor={"red"}
+       paddingX={"10px"}
+       paddingY={"2px"}
+        marginRight={"5px"}
+        fontSize={"12px"}
+        color={"white"}
+        borderRadius={"10px"}
+        bgcolor={"#D23F57"}
       >
         HOT
       </Typography>
-      <Typography >Free Express Shipping</Typography>
+      <Typography fontSize={"12px"} color={"white"} >Free Express Shipping</Typography>
 
       <Box flexGrow={1} />
     
@@ -99,8 +93,8 @@ const Header1: React.FC = () => {
           </MenuItem>
         ))}
       </Menu>
-      <FacebookOutlined sx={{ marginRight: "10px" }} />
-      <Twitter sx={{ marginRight: "10px" }} />
+      <FacebookOutlined sx={{ marginRight: "10px" ,fontSize:"18px" }} />
+      <Twitter sx={{ marginRight: "10px", fontSize:"18px" }} />
     </Stack>
   );
 };
