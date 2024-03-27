@@ -85,7 +85,7 @@ export default function TemporaryDrawer() {
 
   return (
     <div>
-      <Container><Box sx={{ display: 'flex', justifyContent:"space-between" }}>
+      <Container maxWidth="xl"> <Box sx={{ display: 'flex', justifyContent:"space-between" }}>
       {/* Menu component on the left */}
       <Menu />
 
