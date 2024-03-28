@@ -82,7 +82,7 @@ export default function Header2() {
   };
   return (
     <Container
-    maxWidth="xl"
+      maxWidth="xl"
       sx={{ my: "20px", display: "flex", justifyContent: "space-between" }}
     >
       <img src="./img/logo2.svg" />

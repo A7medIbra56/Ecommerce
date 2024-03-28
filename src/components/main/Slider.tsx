@@ -37,7 +37,6 @@ export default function App() {
   };
   return (
     <Swiper
- 
       slidesPerView={5}
       centeredSlides={true}
       loop={true}

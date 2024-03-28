@@ -1,10 +1,8 @@
-import * as React from "react";
 import "./imgProduct.css";
 import { Box, Button, Stack } from "@mui/material";
 export default function TypeProducts() {
-
   return (
-    <Stack sx={{ flexGrow: 1, flexDirection: "row" ,gap:"10px" }} >
+    <Stack sx={{ flexGrow: 1, flexDirection: "row", gap: "10px" }}>
       <Box
         sx={{
           display: "flex",
@@ -110,7 +108,6 @@ export default function TypeProducts() {
           Disable elevation
         </Button>
       </Box>
-     
     </Stack>
   );
 }

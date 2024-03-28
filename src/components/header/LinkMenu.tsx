@@ -71,7 +71,7 @@ export default function CustomizedMenus() {
           backgroundColor: "white",
           fontSize: "14px",
           textTransform: "none",
-          marginRight:"10px",
+          marginRight: "10px",
           color: "#2B3445",
           "&:hover": {
             color: "red",
@@ -115,7 +115,7 @@ export default function CustomizedMenus() {
           backgroundColor: "white",
           fontSize: "14px",
           textTransform: "none",
-          marginRight:"10px",
+          marginRight: "10px",
           color: "#2B3445",
           "&:hover": {
             color: "red",
@@ -158,7 +158,7 @@ export default function CustomizedMenus() {
         sx={{
           backgroundColor: "white",
           fontSize: "14px",
-          marginRight:"10px",
+          marginRight: "10px",
           textTransform: "none",
           color: "#2B3445",
           "&:hover": {
@@ -203,7 +203,7 @@ export default function CustomizedMenus() {
           backgroundColor: "white",
           fontSize: "14px",
           textTransform: "none",
-          marginRight:"10px",
+          marginRight: "10px",
           color: "#2B3445",
           "&:hover": {
             color: "red",
@@ -247,7 +247,7 @@ export default function CustomizedMenus() {
           backgroundColor: "white",
           fontSize: "14px",
           textTransform: "none",
-          marginRight:"10px",
+          marginRight: "10px",
           color: "#2B3445",
           "&:hover": {
             color: "red",

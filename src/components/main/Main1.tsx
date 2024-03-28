@@ -54,7 +54,7 @@ export default function FloatingActionButtonZoom() {
 
   return (
     <Container
-    maxWidth="xl"
+      maxWidth="xl"
       sx={{
         bgcolor: "#F6F6F6",
         position: "relative",
@@ -110,7 +110,7 @@ export default function FloatingActionButtonZoom() {
           <Slider />
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-          <Slider1/>
+          <Slider1 />
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
           View All
